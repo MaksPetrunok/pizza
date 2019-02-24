@@ -10,7 +10,7 @@
         global $pizza;
 
         if ($input == NULL) {
-            echo "Usage: read_from_file_and_set_gloval(argv[1]);\n";
+            echo "Usage: read_inp(argv[1]);\n";
             exit(1) ;
         }
 
@@ -25,7 +25,6 @@
         $min_i = $first_line[2];
         $max_i = $first_line[3];
 
-        print_r($file);
         foreach ($file  as $key => $value) {
             trim($value, "\n");
             $pizza[$key] = str_split(trim($value, "\n"));
