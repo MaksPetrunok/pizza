@@ -2,10 +2,9 @@
 
 // Check if slice size is acceptable by rules
 // bool
-function check_size($c_min, $r_min, $c_max, $r_max) {
+function check_size($area) {
     global $min_i;
     global $max_i;
-    $area = area($c_min, $r_min, $c_max, $r_max);
     return ($area <= $max_i && $area >= ($min_i * 2));
 }
 
