@@ -4,17 +4,16 @@
     require_once("read_inp.php");
     require_once("func.php");
 
+    read_inp($argv[1]);
 
 
+    echo "-----------------------------------";
+    var_dump($pizza);
 
-    // $pizza = array(str_split("MMMMM"), str_split("MTTTM"), str_split("MMMMM"));
-    // $min_i = 1;
-    // $max_i = 6;
+    var_dump(has_all_ingr(0,0,2,1));
+    var_dump(area(0,0,$max_col - 1,$max_row - 1));
+    var_dump(area(0,0,0,0));
 
 
-    // var_dump($pizza);
-
-    // var_dump(has_all_ingr(0,0,1,1));
-    // var_dump(area(0,0,2,1));
-
+    require_once("output.php");
 ?>
