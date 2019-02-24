@@ -1,5 +1,14 @@
 <?php
 
+// Check if slice size is acceptable by rules
+// bool
+function check_size($c_min, $r_min, $c_max, $r_max) {
+    global $min_i;
+    global $max_i;
+    $area = area($c_min, $r_min, $c_max, $r_max);
+    return ($area <= $max_i && $area >= ($min_i * 2));
+}
+
 // Total slice area
 // int
 function area($c_min, $r_min, $c_max, $r_max) {
@@ -14,7 +23,7 @@ function has_all_ingr($c_min, $r_min, $c_max, $r_max) {
     $t = 0;
     $m = 0;
     for ($i = $c_min; $i <= $c_max; $i++) {
-        for ($j = $c_min; $j <= $r_max; $j++) {
+        for ($j = $r_min; $j <= $r_max; $j++) {
             if ($pizza[$i][$j] == 'T')
                 $t++;
             else
