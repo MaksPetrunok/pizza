@@ -22,8 +22,8 @@ function has_all_ingr($c_min, $r_min, $c_max, $r_max) {
     global $min_i;
     $t = 0;
     $m = 0;
-    for ($i = $c_min; $i <= $c_max; $i++) {
-        for ($j = $r_min; $j <= $r_max; $j++) {
+    for ($i = $r_min; $i <= $r_max; $i++) {
+        for ($j = $c_min; $j <= $c_max; $j++) {
             if ($pizza[$i][$j] == 'T')
                 $t++;
             else
